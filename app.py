@@ -9,7 +9,7 @@ app = Flask(__name__)
 app.register_blueprint(views, url_prefix="/")
 
 
-@app.route("/")
+@app.route("/index")
 def homepage():
     card = random.choice(db)
     return render_template("index.html", card=card)
